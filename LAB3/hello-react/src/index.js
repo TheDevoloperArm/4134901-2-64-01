@@ -1,19 +1,37 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import MyName from './components/name';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+
+import Car from "./components/Car";
+import List from "./components/List";
+import Brand from "./components/UI";
+import DataTable from "./components/Table";
+
+/*const number = [5, 2];
+const text = (
+<>
+  <h1 className = "red" id = "test">Hello World!!!</h1>
+  <br>
+  </br>
+  {number[0] + number[1]}
+</>);
+
+class Car extends React.Component{
+  render(){
+    return text;
+  }
+}
+
+function List() {
+  return text;
+}*/
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-    <MyName />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <>
+    <DataTable />
+    <Car age="21" eye="black" />
+    <List />
+    <Brand />
+  </>,
+  document.getElementById("root")
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
